@@ -16,19 +16,20 @@ io.on('connection', (client) => {
     //Escuchar cliente
     client.on('enviarMensaje', (data, callback) => {
 
+        console.log("Escuchando al cliente: ");
         console.log(data);
 
         client.broadcast.emit('enviarMensaje', data);
-        // if (mensaje.usuario) {
-
-        //     callback({
-        //         resp: 'Se recibio el mensaje'
-        //     });
-        // } else {
-        //     callback({
-        //         resp: 'No se recibio el mensaje'
-        //     });
-        // }
+        
+        /* if (data.usuario) {
+             callback({
+                 resp: 'Se recibio el mensaje'
+             });
+        } else {
+             callback({
+                 resp: 'No se recibio el mensaje'
+             });
+        } */
     })
 
 })

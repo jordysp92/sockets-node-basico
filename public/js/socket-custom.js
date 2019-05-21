@@ -19,5 +19,6 @@ socket.emit('enviarMensaje', {
 
 //Escuchar informacion del servidor
 socket.on('enviarMensaje', (mensaje) => {
+    console.log("Escuchando mensaje del servidor");
     console.log(mensaje);
 })
